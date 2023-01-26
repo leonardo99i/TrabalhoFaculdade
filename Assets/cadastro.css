@@ -5,66 +5,70 @@
     font-family: sans-serif;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: linear-gradient(to right, rgb(23, 31, 68), #651e91);
+    background-image: linear-gradient(to right, #6c1781, #e16b11);
+    
 }
 
-.login{
+.cadastro{
     background-color: rgb(18, 29, 52);
-    width: 350px;   
+    width: 430px;   
     padding: 40px;
     border-radius: 50px 0 50px 0;
     box-shadow: 5px 13px 10px rgb(5, 8, 22);
 }
 
-.login h2{
+.cadastro h2{
     margin-bottom: 30px;
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
+    letter-spacing: 3px;
 }
 
 .box{
     position: relative;
 }
 
-.login .box input{
+.box input{
     width: 100%;
-    padding: 10px 0;
+    padding: 10px 0px;
     outline: none;
     border: 0;
-    background: transparent;
-    border-bottom: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    border-bottom: 1px solid white;
     color: white;
-    margin-bottom: 30px;
     font-size: 16px;
+    margin-bottom: 20px;
+    transition: .5s;
 }
 
-.login .box label{
+.box label{
     position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 0;
+    top: 0px;
+    left: 0px;
+    padding: 10px 0px;
     color: white;
     font-size: 16px;
     pointer-events: none;
-    transition: .7s;
+    transition: .6s;
 }
 
-.login .box input:focus~label,
-.login .box input:valid~label
+.box input:focus~label,
+.box input:valid~label
 {
     top: -20px;
-    font-size: 16px;
+    font-size: 14px;
     color: rgb(99, 109, 165);
     font-weight: bold;
 }
 
-.btn-entrar button{
+
+.btn-cadastro button{
     width: 100%;
     padding: 10px;
     cursor: pointer;
@@ -73,16 +77,15 @@ body{
     margin-bottom: 13px;
     color: white;
     background-image: linear-gradient(to right, #6c1781, #e16b11);
-    font-size: 14px;
+    font-size: 15px;
     letter-spacing: .6px;
 }
 
-.cadastro{
+.backLogin{
     display: flex;
     justify-content: center;
     color: white;
-    font-size: 14px;
-   
+    font-size: 15px;
     font-family: sans-serif;
 }
 
