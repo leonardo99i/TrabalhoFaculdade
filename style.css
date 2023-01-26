@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, rgb(23, 31, 68), #651e91);
+   /*  background-color: rgb(39, 50, 104); */
+}
+
+.login{
+    background-color: rgb(18, 29, 52);
+    width: 350px;   
+    padding: 40px;
+    border-radius: 50px 0 50px 0;
+    box-shadow: 5px 13px 10px rgb(5, 8, 22);
+}
+
+.login h2{
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.box{
+    position: relative;
+}
+
+.login .box input{
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: white;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.login .box label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    color: white;
+    font-size: 16px;
+    pointer-events: none;
+    transition: .7s;
+}
+
+.login .box input:focus~label,
+.login .box input:valid~label
+{
+    top: -20px;
+    font-size: 16px;
+    color: rgb(99, 109, 165);
+    font-weight: bold;
+}
+
+.btn-entrar button{
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    margin-bottom: 13px;
+    color: white;
+    background-image: linear-gradient(to right, #6c1781, #e16b11);
+    font-size: 14px;
+    letter-spacing: .6px;
+}
+
+.cadastro{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
