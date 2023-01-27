@@ -13,31 +13,32 @@
 <body>
     <form class="cadastro">  
         <h2 class="">Cadastro</h2>
-        <div class="box">
-            
-            <input type="text" id="usuario"  required>
-            <label for="usuario">Usuário</label>
-        </div>
         
         <div class="box">
             
-            <input type="email" id="email"  required>
-            <label for="email">Email</label>
+            <input type="text" id="nome" onblur="validacaoEmail(f1.email)"   required>
+            <label id="labelNome" for="nome">Nome</label>
         </div>
+        <div class="box">
+            
+            <input type="text" id="usuario"  required>
+            <label id="labelUsuario" for="usuario">Usuário</label>
+        </div>
+        
 
         <div class="box">
             <input type="password" id="senha" required>
-            <label for="senha">Senha</label>
+            <label id="labelSenha" for="senha">Senha</label>
             <i id="vSenha" class="fa fa-eye" aria-hidden="true"></i>
         </div>
         <div class="box">
             <input type="password" id="confirmSenha" required>
-            <label for="confirmSenha">Confirmar senha</label>
+            <label id="labelConfirmarSenha" for="confirmSenha">Confirmar senha</label>
             <i id="eye" class="fa fa-eye" aria-hidden="true"></i>
         </div>
 
         <div class="btn-cadastro">
-            <button type="button">Cadastrar</button>
+            <button type="button" onclick="cadastrar()">Cadastrar</button>
         </div>
 
         <div>
