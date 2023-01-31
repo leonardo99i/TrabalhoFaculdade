@@ -13,19 +13,21 @@
 <body>
     <form class="login">  
         <h2 class="">Logar no sistema</h2>
+
+        <div id="msgError">Usuário ou senha incorretos</div>
         <div class="box">
             <input type="text" id="usuario" required>
-            <label for="usuario">Usuário</label>
+            <label id="usuarioLabel" for="usuario">Usuário</label>
         </div>
         
         <div class="box">
             <input type="password" id="senha" required>
-            <label for="senha">Senha</label>
+            <label id="senhaLabel" for="senha">Senha</label>
             <i class="fa fa-eye" aria-hidden="true"></i>
         </div>
 
         <div class="btn-entrar">
-            <button type="button">Entrar</button>
+            <button type="button" onclick="entrar()">Entrar</button>
         </div>
 
         <div>
