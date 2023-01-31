@@ -79,29 +79,48 @@ confirmSenha.addEventListener('keyup', () => {
         validarConfirmSenha = true;
     }
 })
-
+let n = 0
 function cadastrar(){
     if(validarNome && validarUsuario && validarSenha && validarConfirmSenha){
+       
         let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]');
         
-        listaUser.push({
-            nome: nome.value,
-            usuario: usuario.value,
-            senha: senha.value,
+        listaUser.forEach((item)=>{
+            if(usuario.value == item.usuario){
+                n = 1;
+            }
         })
+        if(n == 1){
+            msgError.innerHTML = 'Nome de usuário já cadastrado';
+            msgError.setAttribute('style', ' display: block');
+            usuario.setAttribute('style', 'border-color: red');
+            labelUsuario.setAttribute('style', 'color: red');
+            
 
-        localStorage.setItem('listaUser', JSON.stringify(listaUser));
-        
-        setTimeout(()=>{
-            window.location.href = '../index.html';
-        }, 1700)
-
-        msgSucess.setAttribute('style', ' display: block');
-        msgError.setAttribute('style', ' display: none');
+    
+            n = 0;
+        }else{
+            listaUser.push({
+                nome: nome.value,
+                usuario: usuario.value,
+                senha: senha.value,
+            })
+    
+            localStorage.setItem('listaUser', JSON.stringify(listaUser));
+            
+            setTimeout(()=>{
+                window.location.href = '../index.html';
+            }, 1700)
+    
+            msgSucess.setAttribute('style', ' display: block');
+            msgError.setAttribute('style', ' display: none');
+        }   
     }else{
         msgError.setAttribute('style', ' display: block');   
         msgSucess.setAttribute('style', ' display: none'); 
     }
+
+    
     
 }
 
