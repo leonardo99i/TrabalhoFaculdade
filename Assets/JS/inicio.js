@@ -12,5 +12,5 @@ if(localStorage.getItem('token') == null){
 function sair(){
     localStorage.removeItem('token')
     localStorage.removeItem('userLogad')
-    window.location.href = '../../index.html'
+    window.location.href = '../index.html'
 }
